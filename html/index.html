@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bad HTML Example</title>
+  <style>
+    .red-text { color: red }
+    .unused-class {}
+  </style>
+  <script>
+    var unusedVar = "hello"
+    console.log("Inline scripts are not ideal!");
+  </script>
+</head>
+<body>
+
+  <!-- Missing alt attribute (HTMLHint: alt-require) -->
+  <img src="logo.png">
+
+  <!-- Inline style (HTMLHint: style-disabled) -->
+  <p style="color: blue;">This paragraph uses inline styles.</p>
+
+  <!-- Broken heading order (HTMLHint: heading-levels) -->
+  <h1>Main Heading</h1>
+  <h3>Sub Heading</h3>
+
+  <!-- Unclosed tag (HTMLHint: tag-pair) -->
+  <div>
+    <p>This paragraph is not properly closed.
+
+  <!-- Missing DOCTYPE (HTMLHint: doctype-first) --> <!-- Already added but can test without if needed -->
+
+  <!-- Use of deprecated tag (HTMLHint: tagname-lowercase / deprecated-tags) -->
+  <center>This is a deprecated tag</center>
+
+  <!-- Empty <a> tag (HTMLHint: a-requires-content) -->
+  <a href="https://example.com"></a>
+
+  <!-- Attribute not in lowercase (HTMLHint: attr-lowercase) -->
+  <input TYPE="text" Name="username">
+
+  <!-- Duplicate ID (HTMLHint: id-unique) -->
+  <div id="footer">Footer 1</div>
+  <div id="footer">Footer 2</div>
+
+  <!-- Missing lang attribute in html tag (HTMLHint: html-lang-require) -->
+  <!-- Already in html tag: should be <html lang="en"> -->
+
+</body>
+</html>
